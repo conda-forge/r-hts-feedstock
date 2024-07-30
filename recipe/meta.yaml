@@ -1,4 +1,4 @@
-{% set version = '6.0.2' %}
+{% set version = "6.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hts/hts_{{ version }}.tar.gz
-  sha256: 8b271d89ad3dfa917ff4654f5a33ed6ada0cc012a18b55490ecb09756aebb51a
+  sha256: c9bd1712137fd2700a7337481ddcbdeb4691e48a53415b15145fae4e77b34413
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -54,10 +54,7 @@ test:
 about:
   home: https://pkg.earo.me/hts/
   license: GPL-2.0-or-later
-  summary: Provides methods for analysing and forecasting hierarchical and grouped time series.
-    The available forecast methods include bottom-up, top-down, optimal combination
-    reconciliation (Hyndman et al. 2011) <doi:10.1016/j.csda.2011.03.006>, and trace
-    minimization reconciliation (Wickramasuriya et al. 2018) <doi:10.1080/01621459.2018.1448825>.
+  summary: Provides methods for analysing and forecasting hierarchical and grouped time series. The available forecast methods include bottom-up, top-down, optimal combination reconciliation (Hyndman et al. 2011) <doi:10.1016/j.csda.2011.03.006>, and trace minimization reconciliation (Wickramasuriya et al. 2018) <doi:10.1080/01621459.2018.1448825>.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
